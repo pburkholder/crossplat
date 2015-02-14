@@ -4,7 +4,7 @@ DEPENDENCIES
     path: .
     metadata: true
   crossplat_test
-    path: ./test/fixtures/cookbooks/crossplat_test
+    path: test/fixtures/cookbooks/crossplat_test
   ips-omniti
   selinux
 
