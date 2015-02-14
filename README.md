@@ -1,7 +1,7 @@
 Cross Platform Cookbook
 =======================
 
-This is derived from Sean OMeara's (crossplat cookbook)[https://github.com/someara/crossplat] but
+This is derived from Sean OMeara's [crossplat cookbook](https://github.com/someara/crossplat) but
 here is used solely for me to experiment with using RSpec
 directly against Chef providers/resources built with LWRPBase
 

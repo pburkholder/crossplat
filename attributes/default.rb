@@ -1,3 +1,3 @@
 # le attributes
 
-default['crossplat']['thing']['an_attribute'] = 'from attributes file'
+default['motd']['message']['an_attribute'] = 'from attributes file'

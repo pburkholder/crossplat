@@ -1,2 +1,2 @@
-name 'crossplat'
-version '0.0.1'
+name 'lwrp
+version '0.1.0'
