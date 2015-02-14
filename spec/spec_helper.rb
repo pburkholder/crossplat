@@ -1,4 +1,5 @@
-require 'chefspec'
-require 'chefspec/berkshelf'
+require 'chef/platform'
+require 'chef/run_context'
 
-at_exit { ChefSpec::Coverage.report! }
+require_relative '../libraries/provider_crossplat_thing'
+require_relative '../libraries/resource_crossplat_thing'
