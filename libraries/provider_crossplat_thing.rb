@@ -1,3 +1,4 @@
+require 'pry'
 class Chef
   class Provider
     class CrossplatThing < Chef::Provider::LWRPBase

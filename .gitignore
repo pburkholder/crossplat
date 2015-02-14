@@ -21,3 +21,4 @@ bin/*
 tmp.git
 nodes
 data_bags
+vendor
