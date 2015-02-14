@@ -1,78 +1,23 @@
 Cross Platform Cookbook
 =======================
 
-Making custom Chef resource cross platform.
+This is derived from Sean OMeara's (crossplat cookbook)[https://github.com/someara/crossplat] but
+here is used solely for me to experiment with using RSpec
+directly against Chef providers/resources built with LWRPBase
 
-Scope
------
-This cookbook is concerned with cross platform things.
-This cookbook does not do everything.
+Demo:
 
-Requirements
-------------
-* Chef 11 or higher
-* Ruby 1.9 (preferably from the Chef full-stack installer)
+    bundle install --path vendor
+    bundle exec rspec spec
 
-Resources / Providers
----------------------
-### crossplat_thing
-
-The `crossplat_thing` resource configures things.
-
-### Example
-
-    crossplat_thing 'default' do
-      action :create
-    end
-
-Recipes
--------
-### crossplat::default
-
-This recipe calls a `crossplat_thing` resource, passing parameters
-from node attributes.
-
-Usage
------
-The `crossplat::server` recipe and `crossplat_thing` resources are
-designed to do things.
-
-### run_list
-
-Include `'recipe[crossplat::default]'`
-
-### Wrapper cookbook
-
-    node.default['crossplat']['an_attribute'] = 'Chef'
-
-    include_recipe 'crossplat::default'
-
-    ruby_block 'wat' do
-      notifies :restart, crossplat_thing[wat]'
-    end
-
-### Used directly in a recipe
-
-    crossplat_thing 'wat' do
-      action :create
-    end
-
-    ruby_block 'wat' do
-      notifies :restart, crossplat_thing[wat]'
-    end
-
-Attributes
-----------
-
-    default['crossplat']['resource_name'] = 'default'
-    default['crossplat']['an_attribute'] = 'chef'
 
 License & Authors
 -----------------
-- Author:: Sean OMeara (<someara@opscode.com>)
+- Author:: Sean OMeara (<someara@chef.io>)
+- Author:: Peter Burkholder (<pburholder@chef.io>)
 
 ```text
-Copyright:: 2009-2014 Chef Software, Inc
+Copyright:: 2009-2015 Chef Software, Inc
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
