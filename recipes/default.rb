@@ -1,3 +1,5 @@
 # comments!
 
-motd_message 'test'
+motd 'test' do
+  message name
+end

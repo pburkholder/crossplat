@@ -1,7 +1,7 @@
 require 'pry'
 class Chef
   class Provider
-    class CrossplatThing < Chef::Provider::LWRPBase
+    class Motd < Chef::Provider::LWRPBase
       def action_create
       end
     end

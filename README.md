@@ -1,4 +1,4 @@
-Cross Platform Cookbook
+MOTD Heavyweight LWRP Cookbook
 =======================
 
 This is derived from Sean OMeara's [crossplat cookbook](https://github.com/someara/crossplat) but
@@ -9,6 +9,8 @@ Demo:
 
     bundle install --path vendor
     bundle exec rspec spec
+
+The cookbook is overkill for configuration /etc/motd, but the point is too keep it easy-to-reason about so the testing framework can be applied elsewhere.
 
 
 License & Authors

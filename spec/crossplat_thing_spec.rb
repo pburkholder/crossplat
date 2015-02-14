@@ -1,10 +1,10 @@
 require_relative 'spec_helper'
-describe Chef::Provider::CrossplatThing do
-  let(:new_resource) { Chef::Resource::CrossplatThing.new('') }
+describe Chef::Provider::Motd do
+  let(:new_resource) { Chef::Resource::Motd.new('') }
   let(:node) { Chef::Node.new() }
   let(:run_context) { Chef::RunContext.new(node,{},nil) }
   subject(:provider) {
-    Chef::Provider::CrossplatThing.new(new_resource, run_context)
+    Chef::Provider::Motd.new(new_resource, run_context)
   }
 
   it do
