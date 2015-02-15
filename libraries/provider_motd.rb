@@ -4,7 +4,9 @@ class Chef
     class Motd < Chef::Provider::LWRPBase
       action :create do
         if ::File.exists?('/etc/motd')
-          Chef::Log.info('message')
+          Chef::Log.debug('motd is here')
+        else
+          Chef::Log.info('motd is missing')
         end
       end
     end
