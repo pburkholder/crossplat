@@ -1,16 +1,16 @@
 require_relative 'spec_helper'
 describe Chef::Provider::Motd do
   let(:new_resource) { Chef::Resource::Motd.new('newname') }
-  let(:current_resource) { Chef::Resource::Motd.new('newname') }
   let(:node) { Chef::Node.new() }
   let(:events) { Chef::EventDispatch::Dispatcher.new }
   let(:run_context) { Chef::RunContext.new(node,{},events) }
+  let(:current_resource) { Chef::Resource::Motd.new('newname') }
 
   subject(:provider) {
     Chef::Provider::Motd.new(new_resource, run_context)
   }
 
-  before do
+  before do # Needed when determining current_resource state
     provider.stub(:load_current_resource).and_return(current_resource)
     provider.new_resource = new_resource
     provider.current_resource = current_resource
