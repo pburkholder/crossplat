@@ -4,7 +4,6 @@ describe Chef::Provider::Motd do
   let(:current_resource) { Chef::Resource::Motd.new('newname') }
   let(:node) { Chef::Node.new() }
   let(:events) { Chef::EventDispatch::Dispatcher.new }
-
   let(:run_context) { Chef::RunContext.new(node,{},events) }
 
   subject(:provider) {
@@ -28,9 +27,6 @@ describe Chef::Provider::Motd do
 
   context 'motd does not exist' do
     before do
-      provider.stub(:load_current_resource).and_return(current_resource)
-      provider.new_resource = new_resource
-      provider.current_resource = current_resource
       ::File.stub(:exist?).with('/etc/motd').and_return(false)
     end
 
